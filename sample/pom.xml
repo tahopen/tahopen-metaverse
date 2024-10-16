@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-metaverse</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>org.tahopen</groupId>
+  <artifactId>sample-metaverse-bundle</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <name>sample-metaverse-bundle Bundle</name>
+  <description>sample-metaverse-bundle OSGi bundle project.</description>
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-metaverse-api</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>tahopen-kettle</groupId>
+      <artifactId>kettle-core</artifactId>
+      <version>${dependency.pentaho-kettle.kettle-core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>tahopen-kettle</groupId>
+      <artifactId>kettle-engine</artifactId>
+      <version>${dependency.pentaho-kettle.kettle-core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>${dependency.org.mockito.mockito-all.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>2.3.7</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Bundle-Activator>org.pentaho.metaverse.sample.Activator</Bundle-Activator>
+            <Export-Package>org.pentaho.metaverse.sample*;version=${project.version}</Export-Package>
+            <Import-Package>org.pentaho.metaverse.analyzer.kettle.extensionpoints,*</Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
