@@ -25,7 +25,7 @@
     <gremlin-java.version>2.6.0</gremlin-java.version>
     <pdi.plugin.name>pdi</pdi.plugin.name>
     <pentaho-mongodb-plugin.version>0.1.0.0-SNAPSHOT</pentaho-mongodb-plugin.version>
-    <platform.version>9.4.0.0-SNAPSHOT</platform.version>
+    <platform.version>0.1.0.0-SNAPSHOT</platform.version>
     <metastore.version>0.1.0.0-SNAPSHOT</metastore.version>
     <!-- TODO: uncomment once https://jira.pentaho.com/browse/ENGOPS-4612 is resolved -->
     <!--<pdi.version>${project.version}</pdi.version>-->
@@ -43,8 +43,8 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-api</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-api</artifactId>
       <version>${platform.version}</version>
       <scope>provided</scope>
     </dependency>
@@ -149,10 +149,10 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-core</artifactId>
-      <version>9.4.0.0-SNAPSHOT</version>
- <!--     <version>${dependency.pentaho.pentaho-platform-repository.version}</version> -->
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-core</artifactId>
+ <!--     <version>9.4.0.0-SNAPSHOT</version> -->
+      <version>${dependency.pentaho.pentaho-platform-repository.version}</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
