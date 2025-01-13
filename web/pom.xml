@@ -5,10 +5,10 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-metaverse</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <artifactId>tahopen-metaverse-web</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>bundle</packaging>
   <name>${project.artifactId}</name>
   <description>Provides data lineage capabilities</description>
